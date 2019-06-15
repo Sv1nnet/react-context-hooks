@@ -9,10 +9,14 @@ class ThemeContextProvider extends Component {
     dark: { syntax: '#ddd', ui: '#333', bg: '#555' },
   }
 
+  toggleTheme = () => {
+    this.setState(state => ({ isLightTheme: !state.isLightTheme }));
+  }
+
   render() {
-    const { state, props } = this;
+    const { state, props, toggleTheme } = this;
     return (
-      <ThemeContext.Provider value={{ ...state }}>
+      <ThemeContext.Provider value={{ ...state, toggleTheme }}>
         {props.children}
       </ThemeContext.Provider>
     );

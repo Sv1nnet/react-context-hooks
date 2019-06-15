@@ -10,7 +10,7 @@ body {
 /* app styles */
 .App {
   max-width: 400px;
-  margin: 30px auto;
+  margin: 0 auto;
   text-align: center;
 }
 nav {
